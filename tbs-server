@@ -1,30 +1,30 @@
 #!/bin/bash
 echo "These are the list of servers running:-"
-echo "1.techbrise "
-echo "2.hrm "
-echo "3.techbrisesolutions "
-echo "4.pt-drupad "
+echo "1.server_A "
+echo "2.server_B "
+echo "3.server_C "
+echo "4.server_D "
 echo "Enter Server Name"
 read server_name
-if [ "$server_name" == "techbrise" ]
+if [ "$server_name" == "server_A" ]
 then
-	echo "Please wait, connecting to techbrise production machine......"
-	ssh -i /home/ashish/tbs_aws.pem ubuntu@techbrise.com
-elif [ "$server_name" == "hrm" ]
+	echo "Please wait, connecting to server_A production machine......"
+	ssh -i /home/ashish/file.pem user@host_url or IP
+elif [ "$server_name" == "server_B" ]
 then
-	echo "Please wait, Connecting to Techbrise HRM production machine....."
-	ssh -i /home/ashish/hrm.pem ubuntu@hrm.techbrise.com
+	echo "Please wait, Connecting to Server_C production machine....."
+	ssh -i /home/ashish/file.pem user@host_url or IP
 
-elif [ "$server_name" == "techbrisesolutions" ]
+elif [ "$server_name" == "server_C" ]
 then
-	echo "Please wait, Connecting to the stagin.techbrise.com Machine...."
-	ssh -i /home/ashish/techbrisesolutions.pem ubuntu@18.216.38.142
+	echo "Please wait, Connecting to the server_C.com Machine...."
+	ssh -i /home/ashish/file.pem ubuntu@18.216.334.142
 
-elif [ "$server_name" == "pt-drupad" ]
+elif [ "$server_name" == "server_D" ]
 then
 
-	echo "Please wait, Connecting to the padit ji server...."
-	ssh -i /home/ashish/tbs_demo.pem ubuntu@dhrupadvinoddwivedi.com
+	echo "Please wait, Connecting to the server_C server...."
+	ssh -i /home/ashish/file.pem ubuntu@host_ip
 else
 	echo "Please Enter correct server name or check server admin"
 
