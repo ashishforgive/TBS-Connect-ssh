@@ -1,0 +1,32 @@
+#!/bin/bash
+echo "These are the list of servers running:-"
+echo "1.techbrise "
+echo "2.hrm "
+echo "3.techbrisesolutions "
+echo "4.pt-drupad "
+echo "Enter Server Name"
+read server_name
+if [ "$server_name" == "techbrise" ]
+then
+	echo "Please wait, connecting to techbrise production machine......"
+	ssh -i /home/ashish/tbs_aws.pem ubuntu@techbrise.com
+elif [ "$server_name" == "hrm" ]
+then
+	echo "Please wait, Connecting to Techbrise HRM production machine....."
+	ssh -i /home/ashish/hrm.pem ubuntu@hrm.techbrise.com
+
+elif [ "$server_name" == "techbrisesolutions" ]
+then
+	echo "Please wait, Connecting to the stagin.techbrise.com Machine...."
+	ssh -i /home/ashish/techbrisesolutions.pem ubuntu@18.216.38.142
+
+elif [ "$server_name" == "pt-drupad" ]
+then
+
+	echo "Please wait, Connecting to the padit ji server...."
+	ssh -i /home/ashish/tbs_demo.pem ubuntu@dhrupadvinoddwivedi.com
+else
+	echo "Please Enter correct server name or check server admin"
+
+fi
+
